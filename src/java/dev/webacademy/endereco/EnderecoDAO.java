@@ -22,10 +22,10 @@ public class EnderecoDAO {
             if (this.conexao != null && !this.conexao.isClosed()) {
                 if (endereco.getPessoa() != null) {
                     if (endereco.getPessoa() instanceof Aluno) {
-                        nomeTabela += "endereco_professor";
+                        nomeTabela += "endereco_aluno";
                         fkPessoa += "id_professor";
                     } /*else if (endereco.getPessoa() instanceof Professor) {
-                        nomeTabela += "endereco_aluno";
+                        nomeTabela += "endereco_professor";
                         fkPessoa += "id_aluno";
                     }*/
                     sql.append("INSERT INTO ").append(nomeTabela).append("(");
