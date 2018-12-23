@@ -35,13 +35,4 @@ public class Aluno extends Pessoa {
     public void setRg(String rg) {
         this.rg = rg;
     }
-
-    String getTelFixo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    String getTelCelular() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
 }

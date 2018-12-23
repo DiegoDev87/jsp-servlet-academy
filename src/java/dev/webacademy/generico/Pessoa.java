@@ -8,6 +8,8 @@ public abstract class Pessoa extends BeanBase {
     private String email;
     private TipoPessoa tipoPessoa;
     private Endereco endereco;
+    private String telFixo;
+    private String telCelular;
 
     public Pessoa() {
     }
@@ -44,4 +46,19 @@ public abstract class Pessoa extends BeanBase {
         this.endereco = endereco;
     }
 
+    public String getTelFixo() {
+        return telFixo;
+    }
+
+    public void setTelFixo(String telFixo) {
+        this.telFixo = telFixo;
+    }
+
+    public String getTelCelular() {
+        return telCelular;
+    }
+
+    public void setTelCelular(String telCelular) {
+        this.telCelular = telCelular;
+    }
 }
