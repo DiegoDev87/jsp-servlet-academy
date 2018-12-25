@@ -1,7 +1,6 @@
 package dev.webacademy.aluno;
 
 import dev.webacademy.bancodados.GerenciadorConexao;
-import dev.webacademy.bancodados.GerenciadorTransacao;
 import dev.webacademy.bancodados.IDAO;
 import dev.webacademy.bancodados.UtilsDB;
 import dev.webacademy.endereco.EnderecoDAO;
