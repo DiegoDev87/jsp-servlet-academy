@@ -63,7 +63,20 @@ CREATE TABLE endereco_professor(
 ALTER TABLE endereco_professor ADD CONSTRAINT fk_professor 
 FOREIGN KEY (id_professor) REFERENCES professor(id) ON DELETE CASCADE;
 
-
-
+CREATE  OR REPLACE FUNCTION insert_aluno() RETURNS TRIGGER AS
+$BODY$
+    BEGIN
+        IF NEW.nome IS NULL THEN
+            RAISE EXCEPTION `Informe o nome do aluno.`;
+        END IF;
+        IF NEW.email IS NULL THEN
+            RAISE EXCEPTION `Informe o email do aluno`;
+        END IF;
+        RETURN NEW;
+    END;
+$BODY$ LANGUAGE plpgsql;
+ 
+CREATE TRIGGER insert_aluno_gatilho BEFORE INSERT OR UPDATE ON aluno
+    FOR EACH ROW EXECUTE PROCEDURE insert_aluno();
 
 
