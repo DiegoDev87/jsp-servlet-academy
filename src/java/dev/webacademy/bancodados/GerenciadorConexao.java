@@ -19,7 +19,7 @@ public class GerenciadorConexao {
 //            System.err.println(inputStream);
 //            prop.load(inputStream);
                 Class.forName("org.postgresql.Driver");
-                connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/web_academy_v1", "postgres", "postgres");
+                connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/dev_web_academy_v1", "postgres", "postgres");
             }
         } catch (SQLException | ClassNotFoundException e) {}
         return connection;
