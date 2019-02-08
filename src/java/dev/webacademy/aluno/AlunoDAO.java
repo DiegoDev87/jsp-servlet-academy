@@ -30,7 +30,6 @@ public class AlunoDAO implements IDAO<Aluno> {
             PreparedStatement ps = null;
             ResultSet rs = null;
             try {
-                conexao = GerenciadorConexao.getConnection();
                 if (this.conexao != null && !this.conexao.isClosed()) {
                     sql.append("INSERT INTO aluno(nome,email,tipo_pessoa,tel_fixo,tel_celular,data_nascimento,cpf,rg) ");
                     sql.append("VALUES(?,?,?,?,?,?,?,?)");
