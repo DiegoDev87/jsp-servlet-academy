@@ -25,10 +25,10 @@ public class EnderecoDAO {
                     if (endereco.getPessoa() != null) {
                         if (endereco.getPessoa() instanceof Aluno) {
                             nomeTabela += "endereco_aluno";
-                            fkPessoa += "id_professor";
+                            fkPessoa += "id_aluno";
                         }/*else if (endereco.getPessoa() instanceof Professor) {
                             nomeTabela += "endereco_professor";
-                            fkPessoa += "id_aluno";
+                            fkPessoa += "id_professor";
                         }*/
                         sql.append("INSERT INTO ").append(nomeTabela).append("(");
                         sql.append(fkPessoa).append(",cep,logradouro,bairro,cidade,uf,complemento");
